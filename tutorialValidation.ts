@@ -20,7 +20,7 @@ namespace tutorialcontrols {
     //% weight=50
     export function sendValidationResult(isValid: boolean, message?: string) {
         if (!message) {
-            message = ""; // Was getting deserialization issues without this.
+            message = `Step ${getTutorialStepNumber()}`; // Was getting deserialization issues without this.
         }
 
         const data: TutorialValidationResult = { isValid, message };
