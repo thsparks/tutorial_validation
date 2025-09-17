@@ -8,6 +8,13 @@ namespace tutorialcontrols {
         message?: string;
     }
 
+    //% block="current tutorial step number"
+    //% blockId=tcgettutorialstepnumber
+    //% weight=40
+    export function getTutorialStepNumber(): number {
+        return control.simmessages.getTutorialStep();
+    }
+
     //% block="send tutorial validion result isValid $isValid ||with $message"
     //% blockId=tcsendvalidationresult
     //% weight=50
